@@ -1,9 +1,56 @@
 <html>
 <head>
+  <link rel="stylesheet" type="text/css" href="/css/main.css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+  <script src="https://use.fontawesome.com/469eaf28ca.js"></script>
 	{{{_sections.head}}}
 </head>
 <body>
-	{{{body}}}
+  <div id="_wrapper">
+    <div id="_sidebar" class="noselect">
+      <div id="_sidebar_photo">
+        <div id="_sidebar_picture">
+        </div>
+      </div>
+      <div id="_sidebar_name">
+        Brady Madden
+      </div>
+      <div id="_sidebar_links">
+        <a href="mailto:bhm3mr@virginia.edu"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
+        <a href="https://facebook.com/brady.madden.98/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+        <a href="https://github.com/bradymadden97/" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+        <a href="https://linkedin.com/in/bradyhmadden/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+      </div>
+      <div id="_sidebar_tabs">
+        <a href='/'>
+          <div class="_sidebar_tab" id="_sidebar_tab_home">
+            Home
+          </div>
+        </a>
+        <a href='/me'>
+          <div class="_sidebar_tab" id="_sidebar_tab_me">
+            Me
+          </div>
+        </a>
+        <a href='/blog'>
+          <div class="_sidebar_tab" id="_sidebar_tab_blog">
+            Blog
+          </div>
+        </a>
+        <a href='/projects'>
+          <div class="_sidebar_tab" id="_sidebar_tab_projects">
+            Projects
+          </div>
+        </a>
+      </div>
+    </div>
+    <div id="_main">
+      {{{body}}}
+    </div>
+  </div>
   {{{_sections.foot}}}
+  <script>
+    document.getElementById("_sidebar_tab_{{tab}}").classList.add("active");
+  </script>
 </body>
 </html>

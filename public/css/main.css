@@ -6,6 +6,15 @@ a{
   color: black;
   text-decoration: none;
 }
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
 #_wrapper{
   width: 100vw;
   height: 100vh;
@@ -45,6 +54,27 @@ a{
   margin-left: 5px;
   margin-right: 5px;
   cursor: pointer;
+}
+#_sidebar_tabs{
+  margin-top: 20px;
+}
+#_sidebar_tabs a div{
+  padding-top: 7.5px;
+  padding-bottom: 7.5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+#_sidebar_tabs .active{
+  background-color: #fff;
+}
+._sidebar_tab{
+  background-color: rgba(232, 151, 64, 1);
+}
+._sidebar_tab:hover{
+  background-color: rgba(226, 201, 174, 1);
+}
+.active:hover{
+  background-color: #fff;
 }
 #_main{
   flex: 1;

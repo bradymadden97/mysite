@@ -30,8 +30,30 @@ app.set('view engine', 'handlebars');
 app.use(express.static(__dirname + '/public'));
 
 app.get("/", function(req, res){
-  res.render('index', {
-    title: "Hello yo"
+  res.render('home', {
+    title: "Brady Madden",
+    tab: 'home'
+  });
+});
+
+app.get("/me", function(req, res){
+  res.render('me', {
+    title: "Brady Madden - Me",
+    tab: 'me'
+  });
+});
+
+app.get("/blog", function(req, res){
+  res.render('blog', {
+    title: "Brady Madden - Blog",
+    tab: 'blog'
+  });
+});
+
+app.get("/projects", function(req, res){
+  res.render('projects', {
+    title: "Brady Madden - Projects",
+    tab: 'projects'
   });
 });
 
