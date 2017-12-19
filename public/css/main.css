@@ -1,0 +1,51 @@
+body{
+  font-family: 'Nunito', 'sans-serif';
+  margin: 0px;
+}
+a{
+  color: black;
+  text-decoration: none;
+}
+#_wrapper{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+#_sidebar{
+  width:250px;
+  height: 100vh;
+  background-color: rgba(232, 151, 64, 1);
+  transition: opacity 0.7s ease;
+  opacity: 0.7
+}
+#_sidebar:hover{
+  opacity: 1;
+}
+#_sidebar div{
+  text-align: center;
+}
+#_sidebar_picture{
+  margin-top: 20%;
+  margin-right: auto;
+  margin-left: auto;
+  background: url("https://s3.amazonaws.com/bhm-mysite/rsz_1rsz_1rsz_p1010286.jpg") 45% 35% no-repeat;
+  width: 190px;
+  height: 190px;
+  border-radius: 50%;
+}
+#_sidebar_name{
+  margin-top: 20px;
+  font-size: 2em;
+}
+#_sidebar_links{
+  margin-top: 10px;
+}
+#_sidebar_links i{
+  font-size: 20px;
+  margin-left: 5px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+#_main{
+  flex: 1;
+}
