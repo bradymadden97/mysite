@@ -1,6 +1,8 @@
 const express = require('express');
 const exphb = 	require('express-handlebars');
+const showdown  = require('showdown');
 const app = express();
+const converter = new showdown.Converter();
 
 
 var port = process.env.PORT || 3000;

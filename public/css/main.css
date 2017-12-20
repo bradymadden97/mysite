@@ -6,6 +6,23 @@ a{
   color: black;
   text-decoration: none;
 }
+p{
+  margin-top: 5px;
+  margin-bottom: 0px;
+}
+.center{
+  text-align:center;
+}
+.right{
+  text-align:right;
+}
+h0{
+  font-size:3em;
+}
+hr{
+  border: 1px solid rgba(232, 151, 64, 1);
+  width: 75%;
+}
 .noselect {
   -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
@@ -40,6 +57,7 @@ a{
   background: url("https://s3.amazonaws.com/bhm-mysite/rsz_1rsz_1rsz_p1010286.jpg") 45% 35% no-repeat;
   width: 190px;
   height: 190px;
+  min-height: 190px;
   border-radius: 50%;
 }
 #_sidebar_name{
@@ -78,4 +96,6 @@ a{
 }
 #_main{
   flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
