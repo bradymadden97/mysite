@@ -4,6 +4,7 @@
 }
 .card-holder{
   padding-top: 10px;
+  margin-right: 5px;
 }
 .year-line{
   float: left;
@@ -17,23 +18,31 @@
   background-color: #e8ecf2;
   margin-right: 10px;
   padding: 10px;
-  display: flex;
+  overflow: hidden;
   margin-bottom: 20px;
 }
 .card_column{
-  width: 70%;
-  display: inline-block;
+  width: calc(70% - 25px);
+  float: left;
   margin-right: 25px;
 }
 .card_title{
   font-size: 2em;
 }
-.card_image_container{
-  flex: 1;
+.card_title div{
   display: inline-block;
+  padding: 2px;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+.card_image_container{
+  width: 30%;
+  float: right;
+  text-align: center;
 }
 .card_image_container img{
   border-radius: 5px;
+  max-width: 300px;
 }
 .card_tags{
   padding-left: 5px;
@@ -58,7 +67,7 @@
   text-align: justify;
 }
 .darkborder{
-  border: 1px solid #6a6b6d;
+  border: 1px solid #898a8c;
 }
 .year{
   margin-left: 40px;
@@ -73,4 +82,25 @@
   padding-bottom: 16px;
   border-radius: 50%;
   border: 2px solid #858689;
+}
+@media only screen and (max-width : 1000px) {
+  .card_image_container, .card_column {
+     width: 100%;
+    }
+  .card_image_container{
+    margin-bottom: 20px;
+  }
+  .card_title, .card_tags{
+    text-align: center;
+  }
+  .year-line{
+    display: none;
+  }
+  .card-holder{
+    margin-left: 15px;
+  }
+  .year{
+    margin-left: auto;
+    margin-right: auto;
+  }
 }

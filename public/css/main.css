@@ -133,3 +133,9 @@ hr{
     transform: translateY(0);
   }
 }
+
+@media screen and (max-width: 640px){
+  #_sidebar{
+    display: none;
+  }
+}
