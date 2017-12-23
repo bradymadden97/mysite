@@ -1,9 +1,21 @@
+.row{
+  width: 100%;
+  display: flex;
+}
+.card-holder{
+  padding-top: 10px;
+}
+.year-line{
+  float: left;
+  margin-left: 74px;
+  margin-right: 50px;
+  border-left: 2px solid #858689;
+  min-height: 100px;
+}
 .card{
   border-radius: 5px;
   background-color: #e8ecf2;
-  width: 80%;
-  margin-left: 15%;
-  margin-right: 5%;
+  margin-right: 10px;
   padding: 10px;
   display: flex;
   margin-bottom: 20px;
@@ -50,8 +62,8 @@
 }
 .year{
   margin-left: 40px;
-  margin-top: 30px;
-  margin-bottom: 10px;
+  margin-top: 17px;
+  margin-bottom: 17px;
   font-size: 24px;
   color: #858689;
 }
