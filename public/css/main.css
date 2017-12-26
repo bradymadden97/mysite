@@ -1,4 +1,4 @@
-::-webkit-scrollbar-track{
+/*::-webkit-scrollbar-track{
   -webkit-box-shadow: inset 0 0 10px rgba(0,0,0,0.3);
   border-radius: 0px;
   background-color: #F5F5F5;
@@ -11,7 +11,7 @@
   border-radius: 0px;
   -webkit-box-shadow: inset 0 0 8px rgba(0,0,0,.3);
   background-color:  rgba(232, 151, 64, 1);
-}
+}*/
 
 body{
   font-family: 'Nunito', 'sans-serif';
@@ -48,13 +48,14 @@ hr{
                                   supported by Chrome and Opera */
 }
 #_wrapper{
-  width: 100vw;
+  overflow: hidden;
+  margin: 0px;
   height: 100vh;
   display: flex;
 }
 #_sidebar{
   width:250px;
-  height: 100vh;
+  height: 100%;
   background-color: rgba(232, 151, 64, 1);
   transition: opacity 0.7s ease;
   opacity: 0.7
@@ -66,10 +67,11 @@ hr{
   text-align: center;
 }
 #_sidebar_picture{
-  margin-top: 20%;
+  margin-top: 50px;
   margin-right: auto;
   margin-left: auto;
-  background: url("https://s3.amazonaws.com/bhm-mysite/rsz_1rsz_1rsz_p1010286.jpg") 45% 35% no-repeat;
+  background: url("https://s3.amazonaws.com/bhm-mysite/madden190.jpg") no-repeat;
+  background-size: cover;
   width: 190px;
   height: 190px;
   min-height: 190px;
@@ -110,6 +112,7 @@ hr{
   background-color: #fff;
 }
 #_main{
+  height: 100%;
   flex: 1;
   overflow-y: auto;
   overflow-x: hidden;
@@ -135,7 +138,60 @@ hr{
 }
 
 @media screen and (max-width: 640px){
+  body{
+    overflow-y: scroll;
+  }
+  #_wrapper{
+    display: block;
+    overflow-y: auto;
+    height: auto;
+  }
   #_sidebar{
-    display: none;
+    width: 100%;
+    height: auto;
+  }
+  #_sidebar_name{
+    margin-top: 0px;
+    padding-top: 20px;
+  }
+  #_sidebar_photo{
+    display:none;
+  }
+  #_main{
+    height: auto;
+    overflow-y: hidden;
+  }
+  #_sidebar_tabs{
+    margin-bottom: 10px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  #_sidebar_tabs a{
+    flex: 1 0 25%;
+    display: inline-block;
+  }
+  ._sidebar_tab{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+}
+@media screen and (max-width: 360px){
+  #_wrapper{
+    overflow-x: auto;
+  }
+  #_main{
+    overflow-x: auto;
+  }
+}
+@media screen and (min-width: 641px) and (max-height: 510px){
+  #_sidebar_picture{
+    margin-top: 20px;
+    min-height: 50px;
+    min-width: 50px;
+    max-height: calc(190px - calc(510px - 100vh));
+    max-width: calc(190px - calc(510px - 100vh));
+  }
+  #_sidebar{
+    overflow-y: auto;
   }
 }
