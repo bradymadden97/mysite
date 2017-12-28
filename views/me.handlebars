@@ -1,5 +1,52 @@
 {{#section 'head'}}
 	<title>{{{title}}}</title>
+	<link rel="stylesheet" type="text/css" href="/css/me.css">
 {{/section}}
 
-About me here.
+<h1 class="center">Hi, I'm Brady.</h1>
+<div>
+	<div class="row">
+		<div class="col-left autocursor">
+			<div class="box" data-img="uva">
+				<p>
+					I'm a third-year<sup class="superscript"><a target="_blank" href='https://en.wikipedia.org/wiki/University_of_Virginia#Student_life'>^</a></sup> student at the <span id="uva-highlight" class="highlight">University of Virginia</span> studying Computer Science and Engineering Business.
+				</p>
+			</div>
+			<div class="box" data-img="cope">
+				<p>
+					This semester I'm four thousand miles away, studying in <span id="cope-highlight" class="highlight">Copenhagen, Denmark</span> and learning to travel around Europe.
+				</p>
+			</div>
+			<div class="box" data-img="fb">
+				<p>
+					Web development, user experience, and algorithms are some areas I love to explore. Following this semester, I'll be in Menlo Park, California as a Software Engineering Intern at <span id="fb-highlight" class="highlight">Facebook</span>.
+				</p>
+			</div>
+			<div class="box">
+				<p>
+					The Office, running, and UVA basketball occupy a lot of my free time. Continue on to see more of what I'm up to!
+				</p>
+			</div>
+		</div>
+		<div class="col-right">
+			<div class="img-container active-img" id="uva-img">
+				<div>
+					<img width="100%" draggable=False src="https://s3.amazonaws.com/bhm-mysite/uva.jpg" alt="UVA">
+				</div>
+			</div>
+			<div class="img-container" id="cope-img">
+				<div>
+					<img width="100%" draggable=False src="https://s3.amazonaws.com/bhm-mysite/cope.png" alt="Copenhagen Map">
+				</div>
+			</div>
+			<div class="img-container" id="fb-img">
+				<div>
+					<img width="100%" draggable=False src="https://s3.amazonaws.com/bhm-mysite/fb.jpg" alt="FB">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<script src='/js/me.js' type="text/javascript"></script>

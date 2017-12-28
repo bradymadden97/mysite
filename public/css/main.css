@@ -31,6 +31,15 @@ p{
 .right{
   text-align:right;
 }
+.superscript{
+  font-size: 10px;
+}
+.superscript a {
+  color: blue;
+}
+.autocursor{
+  cursor: default;
+}
 h0{
   font-size:3em;
 }

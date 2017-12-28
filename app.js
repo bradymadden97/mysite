@@ -32,15 +32,8 @@ app.set('view engine', 'handlebars');
 app.use(express.static(__dirname + '/public'));
 
 app.get("/", function(req, res){
-  res.render('home', {
-    title: "Brady Madden",
-    tab: 'home'
-  });
-});
-
-app.get("/me", function(req, res){
   res.render('me', {
-    title: "Brady Madden - Me",
+    title: "Brady Madden",
     tab: 'me'
   });
 });
