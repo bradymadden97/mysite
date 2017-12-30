@@ -20,3 +20,6 @@ function externalLinkClicked(e){
 $(document).on('click', "#_sidebar_links a", function(){
   externalLinkClicked($(this));
 });
+$(document).on('click', "#wikipedia-link", function(){
+  externalLinkClicked($(this));
+});
