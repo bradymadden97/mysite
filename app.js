@@ -1,7 +1,6 @@
 const express = require('express');
 const exphb = 	require('express-handlebars');
 const showdown  = require('showdown');
-const forceSSL = require('force-ssl-heroku');
 const app = express();
 const converter = new showdown.Converter();
 
@@ -31,7 +30,6 @@ var hbs = exphb.create({
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 app.use(express.static(__dirname + '/public'));
-app.use(forceSSL);
 
 app.get("/", function(req, res){
   res.render('me', {
