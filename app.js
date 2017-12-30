@@ -53,6 +53,6 @@ app.get("/projects", function(req, res){
 });
 
 app.listen(port, function(){
-	if(!process.env.port)
+	if(!process.env.PORT)
 		console.log('Dashboard @ localhost:3000');
 });
