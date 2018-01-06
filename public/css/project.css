@@ -31,6 +31,7 @@ h2{
 }
 .fbcmnts{
   margin-bottom: 20px;
+  overflow-x:auto;
 }
 .gif-pause{
   display:none;
