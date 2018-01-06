@@ -55,7 +55,7 @@ app.get("/projects", function(req, res){
 
 app.get("/projects/:projectName", function(req, res){
 	res.render('projects/'+req.params.projectName, {
-    title: req.params.projectNames,
+    title: req.params.projectName,
     tab: 'projects'
   });
 });
