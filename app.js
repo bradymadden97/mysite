@@ -30,6 +30,7 @@ var hbs = exphb.create({
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/node_modules'));
 
 app.get("/", function(req, res){
   res.render('me', {
@@ -48,6 +49,13 @@ app.get("/blog", function(req, res){
 app.get("/projects", function(req, res){
   res.render('projects', {
     title: "Brady Madden - Projects",
+    tab: 'projects'
+  });
+});
+
+app.get("/projects/:projectName", function(req, res){
+	res.render('projects/'+req.params.projectName, {
+    title: req.params.projectNames,
     tab: 'projects'
   });
 });
